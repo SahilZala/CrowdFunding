@@ -3,7 +3,7 @@ import CampaignCard from './campaign-card';
 import './campaign-grid.css';
 export default function CampaignGrid(props){
     var navigate = useNavigate();
-    if(props.data.length == 0)
+    if(props.data.length === 0)
     {return(<h1>no data</h1>);}
     return(
         <div className='campaign-container'>
