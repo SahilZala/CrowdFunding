@@ -1,0 +1,15 @@
+.campaign-container p
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: 'K2D';
+    font-weight: 800;
+    color: var(--dark-grey);
+}
+.campaign-container .compaign-grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+

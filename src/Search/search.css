@@ -1,0 +1,21 @@
+.search{
+    display: flex;
+    width: fit-content;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    align-items: center;
+    padding: 5px;
+    margin: 0px;
+    padding-right: 10px;
+}
+
+.search input{
+    font-family: 'K2D';
+    font-weight: 600;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+}

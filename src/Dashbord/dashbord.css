@@ -1,0 +1,8 @@
+.dashbord{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row; */
+}

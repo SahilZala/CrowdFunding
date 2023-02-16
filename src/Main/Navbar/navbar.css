@@ -1,0 +1,38 @@
+.navbar{
+    padding: 15px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.left-component
+{
+    flex: 2;
+}
+
+.right-component
+{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+    
+}
+
+.right-component button
+{   
+    background-color: var(--purple-color);
+    padding: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'K2D';
+    cursor: pointer;
+}

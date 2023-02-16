@@ -1,0 +1,188 @@
+.campaign-info-main-container .nav-bar{
+    padding: 10px;
+    background-color: white;
+    display: flex;
+}
+
+.campaign-info-main-container .campaign-head-container{
+    display: flex;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.campaign-info-main-container .campaign-head-container .campaign-primary-container{
+    flex: 8;
+    height: 400px;
+    margin: 10px;
+}
+
+.campaign-info-main-container .campaign-head-container .campaign-primary-container img {
+    width: 100%;
+    min-width: 300px;
+    object-fit: cover;
+    height: 400px;
+    border-radius: 10px;
+}
+
+
+
+.campaign-info-main-container .campaign-head-container .campaign-secondary-container{
+    flex: 2;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(0px,auto);
+    grid-gap: 10px;
+}
+
+.campaign-info-main-container .campaign-head-container .campaign-secondary-container .campaign-side-card{
+    flex: 2;
+    background-color: white;
+    min-width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campaign-info-main-container .campaign-head-container .campaign-secondary-container .campaign-side-card .upper{
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.campaign-info-main-container .campaign-head-container .campaign-secondary-container .campaign-side-card .lowwer{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey);
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.campaign-info-main-container .campaign-head-container .campaign-secondary-container .campaign-side-card .upper p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    font-family: 'K2D';
+    font-weight: 800;
+    color: var(--purple-color);
+}
+.campaign-info-main-container .campaign-head-container .campaign-secondary-container .campaign-side-card .lowwer p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-family: 'K2D';
+    font-weight: 600;
+    color: var(--grey);
+    text-align: center;
+    
+}
+
+.campaign-info-main-container .main-section{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;   
+    flex-wrap: wrap;
+}
+
+.campaign-info-main-container .main-section .primary{
+    padding: 5px;
+    margin: 5px;
+    flex: 5;
+}
+
+.campaign-info-main-container .main-section .secondary{
+    padding: 5px;
+    margin: 5px;
+    flex: 2.5;
+    min-width: 300px;
+}
+
+.campaign-info-main-container .main-section .primary .creator-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.campaign-info-main-container .main-section .primary .creator-box p{
+    font-family: 'K2D';
+    font-weight: 800;
+    color: var(--dark-grey);
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.campaign-info-main-container .main-section .primary .creator-box .title{
+    display: flex;
+    align-items: center;
+}
+
+.campaign-info-main-container .main-section .primary .creator-box .title p {
+    margin: 5px;
+}
+
+.campaign-info-main-container .main-section .primary .story-box p{
+    font-family: 'K2D';
+    font-weight: 800;
+    color: var(--dark-grey);
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.campaign-info-main-container .main-section .primary .donator-box p{
+    font-family: 'K2D';
+    font-weight: 800;
+    color: var(--dark-grey);
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.campaign-info-main-container .main-section .secondary .fund-box p{
+    font-family: 'K2D';
+    font-weight: 800;
+    color: var(--dark-grey);
+    font-size: 20px;
+    
+    margin-bottom: 10px;   
+}
+
+.campaign-info-main-container .main-section .secondary .fund-box .fund-inner-box{
+    background-color: var(--light-grey);
+    padding: 10px;
+    border-radius: 10px;  
+    align-items: center;
+    
+}
+
+.campaign-info-main-container .main-section .secondary .fund-box .fund-inner-box p{
+    font-family: 'K2D';
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--grey);
+    margin: 0px;
+    text-align: center;
+ 
+}
+
+.campaign-info-main-container .main-section .secondary .fund-box .fund-inner-box input{
+    font-family: 'K2D';
+    font-weight: 500;
+    font-size: 20px;
+    flex: 2;
+    color: var(--grey);
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    
+}
+

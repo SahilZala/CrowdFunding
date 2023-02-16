@@ -1,0 +1,33 @@
+.info-container{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+}
+
+.info-container .main{
+    letter-spacing: 5px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'K2D';
+    color: var(--purple-color);
+}
+
+.info-container .sub{
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'K2D';
+    color: var(--grey);
+}
+
+.info-container .contact-container img{
+    width: 30px;
+    height: 30px;
+    margin: 30px;
+}

@@ -1,0 +1,17 @@
+.logo{
+    padding: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;  
+    font-size: 20px;
+    background-color: #1c1c21;
+    width: fit-content;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.logo label{
+    font-family: 'Itim', cursive; 
+    font-weight: 600;
+    color: #52b788;
+    letter-spacing: 2px;
+}

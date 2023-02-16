@@ -1,0 +1,173 @@
+.create-campaign-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-campaign-container .title-banner{
+    padding: 10px;
+    background-color: var(--light-grey);
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.create-campaign-container .title-banner p{
+    padding: 5px;
+    margin: 5px;
+    font-family: 'K2D';
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--dark-grey);
+}
+.create-campaign-container .create-campaign-body
+{
+    flex: 2;
+    width: 100%;
+}
+
+.create-campaign-container .create-campaign-body .first 
+{
+    flex: 2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.create-campaign-container .create-campaign-body .first .body
+{
+    flex: 2;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+
+.create-campaign-container .create-campaign-body input{
+    padding: 10px;
+    outline: none;
+    border: 2px var(--grey) solid;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'K2D';
+    color: var(--grey);
+    
+}
+
+
+.create-campaign-container .create-campaign-body textarea{
+    padding: 10px;
+    outline: none;
+    border: 2px var(--grey) solid;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'K2D';
+    color: var(--grey);
+    min-width: 200px;
+    min-height: 100px;
+}
+
+.create-campaign-container .create-campaign-body label{
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'K2D';
+    color: var(--grey);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.create-campaign-container .create-campaign-body .banner{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--purple-color);
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.create-campaign-container .create-campaign-body .banner p{
+    font-size: 25px;
+    font-family: 'K2D';
+    color: white;
+    font-weight: 600;
+    margin: 15px;
+    align-items: center;
+    display: flex;
+    letter-spacing: 1px;
+}
+
+.create-campaign-container .create-campaign-body .first .submit
+{
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    flex: 2;
+}
+
+
+
+.create-campaign-container .create-campaign-body .first .submit button
+{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--green-color);
+    border: 0px;
+    color: white;
+    font-family: 'K2D';
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width:fit-content
+}
+
+
+
+.create-campaign-container .create-campaign-body .first .body button
+{
+    display: flex;
+    
+    align-items: center;
+    margin-left: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ffb703;
+    border: 0px;
+    color: white;
+    font-family: 'K2D';
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width:fit-content
+}
+
+.create-campaign-container .create-campaign-body .first .body select{
+    padding: 10px;
+    outline: none;
+    border: 2px var(--grey) solid;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'K2D';
+    color: var(--grey);
+}
+
+.create-campaign-container .create-campaign-body .first .body option{
+    outline: none;
+    border: 2px var(--grey) solid;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'K2D';
+    color: var(--grey);
+}
