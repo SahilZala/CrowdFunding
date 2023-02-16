@@ -36,7 +36,7 @@ export default class Navbar extends React.Component{
         return(
             <div className="navbar">
                 <div className='left-component'>
-                <SearchComponent/>
+                <SearchComponent search={this.props.search}/>
                 </div>
                 <div className='right-component'>
                     <button onClick={()=>this.props.setMainComponent(5)}>Start a campeign</button>

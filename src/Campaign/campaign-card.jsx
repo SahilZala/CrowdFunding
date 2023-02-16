@@ -6,12 +6,12 @@ export default function CampaignCard(props){
     return(
         <Card style={{
             cursor: 'pointer'
-        }} className="campaign-card" sx={{ maxWidth: 330, minWidth: 330}} onClick={()=>props.onClick()}>
+        }} className="campaign-card" sx={{ maxWidth: 325, minWidth: 325}} onClick={()=>props.onClick()}>
             <CardMedia
                 className="campaign-card-image"
                 component="img"
                 alt="green iguana"
-                height="160"
+                height="180"
                 image={props.data.data['_imageUrl'] === '' ? 'https://thumbs.dreamstime.com/b/abstract-background-polygon-colorful-vector-design-eps-41507001.jpg' : props.data.data['_imageUrl']}
             />
             <CardContent> 

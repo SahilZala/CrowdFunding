@@ -17,7 +17,8 @@ export default class Main extends React.Component
             main : 0,
             data: [],
             progress: true,
-            myAccountAddress: ''
+            myAccountAddress: '',
+            search : ''
         };
         
     }
@@ -33,8 +34,9 @@ export default class Main extends React.Component
     }
 
     render(){
+       
         this.component = [
-            <Dashbord myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.data} web3={this.web3}/>,
+            <Dashbord myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.search === "" ? this.state.data : this.state.data.filter(d=>d.data['_campaignTitle'].substring(0,this.state.search.length).toLocaleLowerCase() === this.state.search.toLocaleLowerCase())} web3={this.web3}/>,
             <CamapignMain myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.data} web3={this.web3}/>,
             <h1>notification</h1>,
             <Information/>,
@@ -48,9 +50,9 @@ export default class Main extends React.Component
                 </section>
                 <section style={{
                         flex: '1',
-                        padding: '10px'
+                        
                     }}>
-                    <Navbar web3={this.web3} setMainComponent={(index)=>this.setState({main: index})} />
+                    <Navbar search={(value)=>this.setState({search: value})} web3={this.web3} setMainComponent={(index)=>this.setState({main: index})} />
                     <section>
                         {this.component[this.state.main]}
                     </section>
