@@ -60,6 +60,12 @@ class CampaignInfoClass extends React.Component{
         this.setState({
             funding: d
         });
+
+        var date1 = new Date();
+        var date2 = new Date(this.props.location.state.data.data['_endDate']);
+        
+        this.days = parseInt((date2-date1) / (1000 * 3600 * 24));
+
     }
     
 
@@ -93,7 +99,7 @@ class CampaignInfoClass extends React.Component{
                         <div className='campaign-secondary-container'>
                             <div className='campaign-side-card'>
                                 <div className='upper'>
-                                    <p>48</p>
+                                    <p>{this.days}</p>
                                 </div>
                                 <div className='lowwer'>
                                     <p>Day Left</p>

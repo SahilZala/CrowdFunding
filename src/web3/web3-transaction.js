@@ -47,7 +47,7 @@ export default class Web3Transaction{
         var list = await this.instance.methods.getAddressList().call();
         
         for(var i = 0;i < list.length;i++){
-            if(list[i] !== this.accounts[0]){
+            //if(list[i] !== this.accounts[0]){
                 var value = await this.instance.methods.getCampaignList(list[i]).call();
                 
                 for(var j = 0;j<value.length;j++){
@@ -57,9 +57,9 @@ export default class Web3Transaction{
                     temp.data = value[j];
                     temp.donations = val[0];
                     temp.totalDonar = val[1];
-
+                    
                     data.push(temp);
-                }
+              //  }
             }
         }
         return data;
@@ -121,5 +121,9 @@ export default class Web3Transaction{
             from: accounts[0],
             value: ammount
         });
+    }
+    async getAccount(){
+        var account = await this.getRequestAccount();
+        return account;
     }
 }

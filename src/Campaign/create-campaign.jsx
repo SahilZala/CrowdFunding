@@ -23,6 +23,7 @@ class CreateCampaignClass extends React.Component
             catrgory: [
                 'Education',
                 'Household',
+                'Electronics',
                 'Personal Cleaning',
                 'Personal Care',
                 'Oral Care',

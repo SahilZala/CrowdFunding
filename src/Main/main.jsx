@@ -15,18 +15,32 @@ export default class Main extends React.Component
         this.web3 = new Web3Transaction();
         this.state = {
             main : 0,
+            data: [],
+            progress: true,
+            myAccountAddress: ''
         };
+        
+    }
+
+    async componentDidMount(){
+        var data = await this.web3.getCampaignList();
+        var address = await this.web3.getRequestAccount();
+        this.setState({
+            data : data,
+            progress: false,
+            myAccountAddress: address[0]
+        });
+    }
+
+    render(){
         this.component = [
-            <Dashbord web3={this.web3}/>,
-            <CamapignMain  web3={this.web3}/>,
+            <Dashbord myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.data} web3={this.web3}/>,
+            <CamapignMain myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.data} web3={this.web3}/>,
             <h1>notification</h1>,
             <Information/>,
             <h1>logout</h1>,
             <CreateCampaign setMainComponent={(index)=>this.setState({main: index})} web3={this.web3}/>
         ];
-    }
-
-    render(){
         return(
             <div className="main-container">
                 <section> 
