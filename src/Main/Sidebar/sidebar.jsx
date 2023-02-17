@@ -1,4 +1,4 @@
-import { Notifications, Dashboard, Info, Logout} from '@mui/icons-material';
+import { Notifications, Dashboard, Info, CurrencyBitcoin} from '@mui/icons-material';
 import { Campaign } from '@mui/icons-material';
 import Logo from '../../Logo/logo';
 import SideButton from './SideButton/sidebutton';
@@ -29,16 +29,20 @@ export default function Sidebar(props){
                     cursor: 'pointer'
                 }}/>}/>
                
-                <SideButton onClick={()=>props.setMainComponent(2)} icon={<Notifications style={{
+               <SideButton onClick={()=>props.setMainComponent(2)} icon={<CurrencyBitcoin style={{
                     fontSize: '30px',
                     color: props.index === 2 ? 'var(--green-color)' : 'var(--light-grey)',
                     cursor: 'pointer'
                 }}/>}/>
-                <SideButton onClick={()=>props.setMainComponent(3)} icon={<Info style={{
+
+                <SideButton onClick={()=>props.setMainComponent(3)} icon={<Notifications style={{
                     fontSize: '30px',
                     color: props.index === 3 ? 'var(--green-color)' : 'var(--light-grey)',
                     cursor: 'pointer'
                 }}/>}/>
+
+                
+                
             </div>  
 
             <div style={{
@@ -47,11 +51,17 @@ export default function Sidebar(props){
                 alignItems: 'end'
                 
             }} className='middle'>
-                <SideButton onClick={()=>props.setMainComponent(4)} icon={<Logout style={{
+
+                <SideButton onClick={()=>props.setMainComponent(4)} icon={<Info style={{
                     fontSize: '30px',
                     color: props.index === 4 ? 'var(--green-color)' : 'var(--light-grey)',
                     cursor: 'pointer'
                 }}/>}/>
+                {/* <SideButton onClick={()=>props.setMainComponent(4)} icon={<Logout style={{
+                    fontSize: '30px',
+                    color: props.index === 4 ? 'var(--green-color)' : 'var(--light-grey)',
+                    cursor: 'pointer'
+                }}/>}/> */}
                
             </div>
         </div>

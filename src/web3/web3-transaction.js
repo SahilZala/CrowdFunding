@@ -54,9 +54,11 @@ export default class Web3Transaction{
                     
                     var temp = {};
                     var val = await this.getBalanceAndDonarsLength(value[j]._id);
+                    var fund = await this.getFundingList(value[j]._id);
                     temp.data = value[j];
                     temp.donations = val[0];
                     temp.totalDonar = val[1];
+                    temp.fund = fund;
                     
                     data.push(temp);
               //  }
@@ -80,6 +82,8 @@ export default class Web3Transaction{
                     
                     var temp = {};
                     var val = await this.getBalanceAndDonarsLength(value[j]._id);
+                    
+                    
                     temp.data = value[j];
                     temp.donations = val[0];
                     temp.totalDonar = val[1];
@@ -93,7 +97,6 @@ export default class Web3Transaction{
     }
 
     async getFundingList(cid){
-        await this.initContract();
         var val = await this.instance.methods.getFunding(cid).call();
         return val;
     }

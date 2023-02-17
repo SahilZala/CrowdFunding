@@ -15,7 +15,7 @@ class CampaignInfoClass extends React.Component{
         this.state = {
             fund: 0,
             progress: false,
-            funding: []
+            leftDate: 0
         }
         
     }
@@ -56,15 +56,15 @@ class CampaignInfoClass extends React.Component{
     }
 
     async componentDidMount(){
-        const d = await this.web3.getFundingList(this.props.location.state.data.data['_id']);
-        this.setState({
-            funding: d
-        });
-
+        // const d = await this.web3.getFundingList(this.props.location.state.data.data['_id']);
+        
         var date1 = new Date();
         var date2 = new Date(this.props.location.state.data.data['_endDate']);
         
-        this.days = parseInt((date2-date1) / (1000 * 3600 * 24));
+        this.setState({
+            leftDate: parseInt((date2-date1) / (1000 * 3600 * 24))
+        });
+
 
     }
     
@@ -99,7 +99,7 @@ class CampaignInfoClass extends React.Component{
                         <div className='campaign-secondary-container'>
                             <div className='campaign-side-card'>
                                 <div className='upper'>
-                                    <p>{this.days}</p>
+                                    <p>{this.state.leftDate}</p>
                                 </div>
                                 <div className='lowwer'>
                                     <p>Day Left</p>
@@ -110,7 +110,7 @@ class CampaignInfoClass extends React.Component{
                                     <p>{this.props.location.state.data.donations}</p>
                                 </div>
                                 <div className='lowwer'>
-                                    <p>Raised of {this.props.location.state.data.data['_goal']}Wei</p>
+                                    <p>Raised of Wei {this.props.location.state.data.data['_goal']} GoerliETH</p>
                                 </div>
                             </div>
                             <div className='campaign-side-card'>
@@ -180,11 +180,11 @@ class CampaignInfoClass extends React.Component{
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {this.state.funding.map(d=>{
-                                      return(<tr>
+                                    {this.props.location.state.data.fund.map(d=>{
+                                      return(<tr key={d['_id']}>
                                         <td>{d['_id']}</td>
                                         <td>{d['_address']}</td>
-                                        <td>{d['_fund']}</td>
+                                        <td>Wei {d['_fund']} GoerliETH</td>
                                         <td>{d['_date']}</td>
                                     </tr>);
                                     })}

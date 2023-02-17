@@ -7,6 +7,7 @@ import CreateCampaign from "../Campaign/create-campaign";
 import Web3Transaction from "../web3/web3-transaction";
 import CamapignMain from "../Campaign/campaign-main";
 import Information from "../Information/information";
+import Investment from "../Investment/investment";
 
 export default class Main extends React.Component
 {
@@ -36,12 +37,12 @@ export default class Main extends React.Component
     render(){
        
         this.component = [
-            <Dashbord myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.search === "" ? this.state.data : this.state.data.filter(d=>d.data['_campaignTitle'].substring(0,this.state.search.length).toLocaleLowerCase() === this.state.search.toLocaleLowerCase())} web3={this.web3}/>,
+            <Dashbord myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.search === "" ? this.state.data : this.state.data.filter(d=>d.data['_campaignTitle'].substring(0,this.state.search.length).toLocaleLowerCase() === this.state.search.toLocaleLowerCase() || d.data['_label'].substring(0,this.state.search.length).toLocaleLowerCase() === this.state.search.toLocaleLowerCase())} web3={this.web3}/>,
             <CamapignMain myAddress={this.state.myAccountAddress} progress={this.state.progress} data = {this.state.data} web3={this.web3}/>,
-            <h1>notification</h1>,
+            <Investment myAddress={this.state.myAccountAddress} data = {this.state.data}/>,
+            <h3 style={{textAlign: 'center'}}>no notification</h3>,
             <Information/>,
-            <h1>logout</h1>,
-            <CreateCampaign setMainComponent={(index)=>this.setState({main: index})} web3={this.web3}/>
+            <CreateCampaign  setMainComponent={(index)=>this.setState({main: index})} web3={this.web3}/>
         ];
         return(
             <div className="main-container">

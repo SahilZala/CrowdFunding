@@ -4,7 +4,7 @@ import { Search } from '@mui/icons-material';
 export default function SearchComponent(props){
     return(
         <div className='search'>
-            <input type='text' onChange={(value)=>props.search(value.target.value)} placeholder='Do funding now'>
+            <input type='text' onChange={(value)=>props.search(value.target.value)} placeholder='Search by cmpaign-name/label'>
                 
             </input>
             

@@ -10,6 +10,7 @@
 }
 
 .search input{
+    width: 0px;
     font-family: 'K2D';
     font-weight: 600;
     outline: none;
@@ -18,4 +19,9 @@
     border: 0px;
     border-radius: 10px;
     background-color: #e9ecef;
+}
+
+.search input:focus{
+    width: 315px;
+    transition: width 5s;
 }
