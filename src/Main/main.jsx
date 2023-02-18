@@ -13,11 +13,12 @@ export default class Main extends React.Component
 {
     constructor(){
         super();
+
         this.web3 = new Web3Transaction();
         this.state = {
             main : 0,
             data: [],
-            progress: true,
+            progress: this.web3.isMetamaskInstalled(),
             myAccountAddress: '',
             search : ''
         };

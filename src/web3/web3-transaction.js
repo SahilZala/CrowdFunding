@@ -129,4 +129,16 @@ export default class Web3Transaction{
         var account = await this.getRequestAccount();
         return account;
     }
+
+    isMetamaskInstalled(){
+        
+        if(typeof window.ethereum !== 'undefined') {
+            return true;
+        }
+        else{
+            alert("Metamask is not installed");
+            return false;
+        }
+
+    }
 }
